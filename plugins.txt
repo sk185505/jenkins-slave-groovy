@@ -3,3 +3,4 @@ authorize-project
 git
 docker
 ssh-slaves
+jdk-tool
