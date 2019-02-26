@@ -1,6 +1,6 @@
 seed
 authorize-project
 git
-docker
-ssh-slaves
-jdk-tool
+#docker
+#ssh-slaves
+#jdk-tool
