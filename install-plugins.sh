@@ -79,7 +79,8 @@ doDownload() {
         url="${JENKINS_INCREMENTALS_REPO_MIRROR}/$(echo "${groupId}" | tr '.' '/')/${plugin}/${incrementalsVersion}/${plugin}-${incrementalsVersion}.hpi"
     else
         JENKINS_UC_DOWNLOAD=${JENKINS_UC_DOWNLOAD:-"$JENKINS_UC/download"}
-        url="$JENKINS_UC_DOWNLOAD/plugins/$plugin/$version/${plugin}.hpi"
+        #url="$JENKINS_UC_DOWNLOAD/plugins/$plugin/$version/${plugin}.hpi"
+        url=
     fi
 
     echo "Downloading plugin: $plugin from $url"
