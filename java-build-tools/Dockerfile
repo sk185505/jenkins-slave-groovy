@@ -1,3 +1,3 @@
 #rkalluru/java-build-tools:v1
 FROM centos
-RUN yum install java-1.8.0-openjdk -y 
+RUN yum install java-1.8.0-openjdk unzip -y 
