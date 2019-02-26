@@ -80,7 +80,7 @@ doDownload() {
     else
         JENKINS_UC_DOWNLOAD=${JENKINS_UC_DOWNLOAD:-"$JENKINS_UC/download"}
         #url="$JENKINS_UC_DOWNLOAD/plugins/$plugin/$version/${plugin}.hpi"
-        url=
+        url="$JENKINS_UC_DOWNLOAD/latest/${plugin}.hpi"
     fi
 
     echo "Downloading plugin: $plugin from $url"
