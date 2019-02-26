@@ -2,3 +2,4 @@ seed
 authorize-project
 git
 docker
+ssh-slaves
