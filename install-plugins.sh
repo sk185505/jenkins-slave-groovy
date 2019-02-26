@@ -66,10 +66,10 @@ doDownload() {
         # If version-specific Update Center is available, which is the case for LTS versions,
         # use it to resolve latest versions.
         #url="$JENKINS_UC_LATEST/latest/${plugin}.hpi"
-        url="https://updates.jenkins.io/latest/"
+        url="https://updates.jenkins.io/latest/${plugin}.hpi"
     elif [[ "$version" == "experimental" && -n "$JENKINS_UC_EXPERIMENTAL" ]]; then
         # Download from the experimental update center
-        url="$JENKINS_UC_EXPERIMENTAL/latest/${plugin}.hpi"
+        #url="$JENKINS_UC_EXPERIMENTAL/latest/${plugin}.hpi"
     elif [[ "$version" == incrementals* ]] ; then
         # Download from Incrementals repo: https://jenkins.io/blog/2018/05/15/incremental-deployment/
         # Example URL: https://repo.jenkins-ci.org/incrementals/org/jenkins-ci/plugins/workflow/workflow-support/2.19-rc289.d09828a05a74/workflow-support-2.19-rc289.d09828a05a74.hpi
