@@ -66,7 +66,7 @@ doDownload() {
         # If version-specific Update Center is available, which is the case for LTS versions,
         # use it to resolve latest versions.
         #url="$JENKINS_UC_LATEST/latest/${plugin}.hpi"
-        
+        url="https://updates.jenkins.io/latest/"
     elif [[ "$version" == "experimental" && -n "$JENKINS_UC_EXPERIMENTAL" ]]; then
         # Download from the experimental update center
         url="$JENKINS_UC_EXPERIMENTAL/latest/${plugin}.hpi"
