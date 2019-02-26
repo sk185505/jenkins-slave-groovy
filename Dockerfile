@@ -9,4 +9,5 @@ COPY plugins.txt /usr/share/jenkins/ref/plugins.txt
 COPY install-plugins.sh /usr/local/bin/install-plugins.sh 
 USER root
 RUN chmod +x /usr/local/bin/install-plugins.sh 
+USER jenkins
 RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
