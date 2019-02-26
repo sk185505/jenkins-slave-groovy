@@ -1,1 +1,1 @@
-# jenkins-slave-groovy
+# jenkins-docker-groovy
