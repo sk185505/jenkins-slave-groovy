@@ -1,5 +1,1 @@
 # jenkins-slave-groovy
-#
-
-# Test
-#
