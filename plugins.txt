@@ -1,3 +1,4 @@
 seed
 authorize-project
 git
+docker
