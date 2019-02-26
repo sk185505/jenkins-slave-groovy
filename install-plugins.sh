@@ -70,6 +70,7 @@ doDownload() {
     elif [[ "$version" == "experimental" && -n "$JENKINS_UC_EXPERIMENTAL" ]]; then
         # Download from the experimental update center
         #url="$JENKINS_UC_EXPERIMENTAL/latest/${plugin}.hpi"
+        url="https://updates.jenkins.io/latest/${plugin}.hpi"
     elif [[ "$version" == incrementals* ]] ; then
         # Download from Incrementals repo: https://jenkins.io/blog/2018/05/15/incremental-deployment/
         # Example URL: https://repo.jenkins-ci.org/incrementals/org/jenkins-ci/plugins/workflow/workflow-support/2.19-rc289.d09828a05a74/workflow-support-2.19-rc289.d09828a05a74.hpi
@@ -78,11 +79,11 @@ doDownload() {
         groupId=${arrIN[1]}
         incrementalsVersion=${arrIN[2]}
         #url="${JENKINS_INCREMENTALS_REPO_MIRROR}/$(echo "${groupId}" | tr '.' '/')/${plugin}/${incrementalsVersion}/${plugin}-${incrementalsVersion}.hpi"
-        url="$JENKINS_UC_DOWNLOAD/latest/${plugin}.hpi"
+        url="https://updates.jenkins.io/latest/${plugin}.hpi"
     else
         JENKINS_UC_DOWNLOAD=${JENKINS_UC_DOWNLOAD:-"$JENKINS_UC/download"}
         #url="$JENKINS_UC_DOWNLOAD/plugins/$plugin/$version/${plugin}.hpi"
-        url="$JENKINS_UC_DOWNLOAD/latest/${plugin}.hpi"
+        url="https://updates.jenkins.io/latest/${plugin}.hpi"
     fi
 
     echo "Downloading plugin: $plugin from $url"
